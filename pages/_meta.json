@@ -1,7 +1,6 @@
 {
   "index": "Introduction",
-  "another": "Another Page",
-  "advanced": "Advanced (A Folder)",
+  "az900": "AZ-900",
   "about": {
     "title": "About",
     "type": "page"
