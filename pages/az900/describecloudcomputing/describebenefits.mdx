@@ -19,3 +19,20 @@ There we differenciate between two types of scalability:
 - **Vertical scaling**: This is the ability to increase the processing power of one virtual machine for example. So if you are creating an App and this needs more processign power, you would just give the one virtual machine one more CPU or give a bit more RAM.
 - **Horizontal scaling**: With horizontal scaling, you add a complete new virtual machine or a new container which contains a duplicate of the application. Here we would have multiple threads of the same application running.
 
+# Describe the benefits of reliability and predictability in the cloud
+
+## Reliability
+This is the ability to keep the application running, in case one instance fails. 
+Let's say the swiss mountains experience an earthquake and the datacenter in the mountain is destroyed. In this case the application should still be running, because there is a datacenter in Zurich which has the same application running and can take over the traffic.
+This is also called **Decentralization**.
+
+## Predictability
+This is the ability to know how much resources you need. 
+This is important for the cost. If you know how much resources you need, you can plan the cost for the next month.
+
+## Performance
+Autoscaling, load balancing and also high availibility are examples, which can improve the performance predictability.
+All of these tool can help to predict the performance and also take action. For example if the laod balancer detects a peak in traffic, it will automatically create more resources on Azure.
+
+## Cost
+You can predict the cost thanks to the dashboards availible on Azure.
