@@ -1,0 +1,21 @@
+# Describe the benefits of high availability and scalability in the cloud
+
+## High availibility
+The SLA (**service-level agreement**) defines the percentage of time where the service is availible. It also defines the credit given back by the cloud provider, when the SLA is not met.
+Usually the availibility in Azure is 99% or 99.9%.
+
+| Availibility percentage | Downtime per week | Downtime per month |
+| ----------------------- | ----------------- | ------------------ |
+| 99%                     | 1.68 hours        | 7.2 hours          |
+| 99.9%                   | 10 minutes        | 43.2 minutes       |
+
+This is a big difference. 
+
+## Scalability
+This is the ability to increase or decrese resources.
+This can be cost effective and when a peak in traffic is detected, you can easily increase the resources
+
+There we differenciate between two types of scalability:
+- **Vertical scaling**: This is the ability to increase the processing power of one virtual machine for example. So if you are creating an App and this needs more processign power, you would just give the one virtual machine one more CPU or give a bit more RAM.
+- **Horizontal scaling**: With horizontal scaling, you add a complete new virtual machine or a new container which contains a duplicate of the application. Here we would have multiple threads of the same application running.
+
