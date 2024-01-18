@@ -1,0 +1,35 @@
+# Virtual machines
+
+This is an IaaS virtual machine on top of a server from microsoft.
+
+**Advantages**
+1. Total control over the VM
+2. Can install any software
+3. Can configure networking
+4. No need to buy hardware
+
+## Scaling
+For minor tasks you can use one single VM, but for bigger tasks you can use multiple VMs in a group, which than can be scaled.
+
+## Create Nginx VM with cloud cli (Via MS Learn)
+1. Create a VM 
+```bash
+az vm create 
+    --resource-group [sandbox resource group name] 
+    --name my-vm 
+    --public-ip-sku Standard 
+    --image Ubuntu2204 
+    --admin-username azureuser 
+    --generate-ssh-keys
+```
+2. Configure Nginx
+```bash
+    az vm extension set
+    --resource-group [sandbox resource group name] 
+    --vm-name my-vm 
+    --name customScript 
+    --publisher Microsoft.Azure.Extensions 
+    --version 2.1 
+    --settings '{"fileUris":["https://raw.githubusercontent.com/MicrosoftDocs/mslearn-welcome-to-azure/master/configure-nginx.sh"]}' 
+    --protected-settings '{"commandToExecute": "./configure-nginx.sh"}'
+```
