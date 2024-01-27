@@ -1,2 +1,4 @@
 {
-  "describevm": "Virtual machines"
+  "describevm": "Virtual machines",
+  "describeaf": "Azure functions"
+}
