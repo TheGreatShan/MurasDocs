@@ -1,4 +1,5 @@
 {
   "describevm": "Virtual machines",
-  "describeaf": "Azure functions"
+  "describeaf": "Azure functions",
+  "describeaho": "Describe application hosting options"
 }
