@@ -2,5 +2,6 @@
   "describestorageaccounts": "Describe Azure storage accounts",
   "storageredundancy": "Describe Azure storage redundancy",
   "describestorageservices": "Describe Azure storage services",
-  "datamigration": "Identify Azure data migration options"
+  "datamigration": "Identify Azure data migration options",
+  "filemovementoption": "Identify Azure file movement options"
 }
