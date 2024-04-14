@@ -1,0 +1,54 @@
+# Describe Azure virtual private networks (VPN)
+
+Usually here to connect trustes private networks to an untrusted one (mostly public networks)
+
+## VPN Gateways
+
+Azure VPN Gateway instances are deployed in dedicated subnet of the virtual networks.
+It enables the following connectivity:
+
+- Connect on-premises datacenters to virtual networks through a site-to-site connection
+- Connect individual computers to virtual networks through a point-to-site connection
+- Connect virtual networks to each other through a network-to-network connection
+
+The data transfer is always encrytpted in a private tunnel.
+Each virtual network can only have one VPN gateway.
+
+During setup, I need to define if I want a <strong>policy-based</strong> or <strong>route-based</strong> VPN.
+
+- <strong>Policy-based</strong> VPN: It specifies the IP address of packets that should be encrypted, statically.
+- <strong>Route-based</strong> VPN: It specifies the IP address of packets that should be encrypted, dynamically.
+
+<strong>route-based</strong> VPNs are recommended, because they are more flexible and secure. And should be used in the following types of connectivity:
+
+- Connections between virtual networks
+- Point-to-site connections
+- Multisite connections
+- Coexistence with an Azure ExpressRoute gateway
+
+## High availability
+
+### Active/standby
+
+Two instances are created, but you only see one in portal. One active one and the other one will automatically take over if the active one fails or maintanance is planned.
+
+### Active/active
+
+Both instances are active. Each of the instances have a unique public IP. Than we create a seperate private tunnel for each of the instances.
+
+### ExpressRoute failover
+
+It already has resiliency built in.
+It is not immunde to physical problems, so I can provision a VPN gateway which uses the internet as a backup.
+
+### Zone-redundant gateways
+
+Only in certain regions. The VPN Gateway and ExpressRoute gateways can be deployed in multiple availability zones.
+This results in :
+
+1. Resiliency
+2. Scalibility
+3. Higher availability
+
+Gateways are physicaly and logically separated from each other.
+The gateways require different gateway stock keeping units (SKUs) and also use Standard public IP instead of Basic public IP.
