@@ -1,0 +1,70 @@
+# Azure storage services
+
+## Services
+
+1. Azure Blobs: Store unstructured data (text or binary data)
+2. Azure Files: Fully managed file shares in the cloud
+3. Azure Queues: Store large numbers of messages that can be accessed from anywhere in the world
+4. Azure Tables: Store structured NoSQL data
+5. Azure Disks: Managed block storage for VMs
+
+## Benefits
+
+1. <strong>Durable and highly available</strong>: Data is replicated to ensure durability and high availability
+2. <strong>Secure</strong>: Data is encrypted
+3. <strong>Scalable</strong>: Scale up or down as needed
+4. <strong>Manages</strong>: Azure handles the maintance of the infrastructure and also in case of failure.
+5. <strong>Accesible</strong>: Accessible from anywhere in the world with HTTP and HTTPS. MS also provides libraries for these services in different programming languages (.NET, Java, Python, etc.)
+
+## Services explained
+
+### Azure Blobs
+
+Storage for unstrucuted data, like images, videos, backups etc.
+the blob can be accessed via a REST API, Azure CLI, Azure PowerShell or Azure Storage client libraries.
+
+#### Tiers
+
+- Hot access tier: For frequently used files (images for a website)
+  - Can be set at account level
+  - Can be set at blob level, during or after upload.
+- Cool access tier: For files, which are not that much used and stored for at least 30 days (customer invoices)
+  - Can be set at account level
+  - Can be set at blob level, during or after upload.
+  - Can tolerate lower availability. Lower availability SLA and higher access costs compared to hot data are acceptable for the lower storage price
+- Cold access tier: For files, which are rarely accessed and stored for at least 90 days
+  - Cannot be set at account level
+  - Can be set at blob level, during or after upload.
+  - Can tolerate lower availability. Lower availability SLA and higher access costs compared to hot data are acceptable for the lower storage price
+- Archive access tier: For files, which are rarely accessed and stored for at least 180 days, with flexible latency requirements. (Long-term backups)
+
+  - Cannot be set at account level
+  - Can be set at blob level, during or after upload.
+  - Stores data offline and lowest storage costs. Also the highest costs to rehydrate and access data.
+
+  ### Azure Files
+
+  Manages file shares accessable with SMB (Standard Message Block) or NFS (Network File System) protocol. SMB is accesible by Windows, Linux and MacOS. NFS only for Linux and MacOS
+
+  #### Benefits
+
+  1. <strong>Shared access</strong>: Works seemlesly with nearly all OS's. On-prem to cloud migration is easy.
+  2. <strong>Fully managed</strong>: Azure handles the maintance of the infrastructure and also in case of failure.
+  3. <strong>Scripting and tooling</strong>:
+     PowerSheel cmdlets and Azure CLI can be used for the administration of the Azure applications.
+  4. <strong>Resilincy</strong>: High availability is pre programmed. All problems I got with On-prem storages (power outage) are not my problem anymore
+
+5. <strong>Familiar programmability</strong>: Application can access the file share with simple file system I/O APIs. So the existing code can be reused.
+
+### Azure Queues
+
+Stores messages which can be accessed from anywhere. The messages can be up to 64 KB. The messages are stored in a queue and can be accessed by a worker role.
+
+### Azure Disks
+
+Block-level storage volumes, which are virtualized and therefore offer more availability and resiliency (capability to recover quickly from difficulties).
+
+### Azure Tables
+
+A NoSQL datastore, which can store large amounts of strucuted data.
+Supoprts hybrid and multi-cloud solutions, as the data is always visible with authenticated calls.

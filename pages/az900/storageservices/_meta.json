@@ -1,4 +1,5 @@
 {
   "describestorageaccounts": "Describe Azure storage accounts",
-  "storageredundancy": "Describe Azure storage redundancy"
+  "storageredundancy": "Describe Azure storage redundancy",
+  "describestorageservices": "Describe Azure storage services"
 }
