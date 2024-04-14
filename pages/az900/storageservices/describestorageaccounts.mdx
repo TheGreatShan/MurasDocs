@@ -1,0 +1,43 @@
+# Describe Azure storage accounts
+
+## What is Azure storage?
+
+Azure storage got different sub services. The main services are:
+
+1. Blob storage (Access images on a browser, for example, or store backups)
+2. File storage ()
+3. Disk storage (For VMs)
+4. Messaging storage (Queue storage)
+5. NoSQL storage (Table storage -> Key value pairs. Cheep)
+
+<strong>Hot storage</strong> -> Frequently accessed data (Images for website)
+<strong>Cool storage</strong> -> Data that is accessed less frequently (at least 30 days, customer invoices for examle)
+<strong>Archive storage</strong> -> Data that is accessed rarely (at least 180 days, backups)
+
+## Redundancy types
+
+The following redundancy options are available for Azure storage accounts:
+
+1. Locally redundant storage (LRS)
+2. Geo-redundant storage (GRS)
+3. Read-access geo-redundant storage (RA-GRS)
+4. Zone-redundant storage (ZRS)
+5. Geo-zone-redundant storage (GZRS)
+6. Read-access geo-zone-redundant storage (RA-GZRS)
+
+| Type                        | Supported Services                 | Redundancy options                   |
+| --------------------------- | ---------------------------------- | ------------------------------------ |
+| Standard general-purpose v2 | Blob, Queue, Table and Azure files | LRS, GRS, RA-GRS, ZRS, GZRS, RA-GZRS |
+| Premium block blob          | Blob                               | LRS, ZRS                             |
+| Premium file shares         | Files                              | LRS, ZRS                             |
+| Premium page blobs          | Disk                               | LRS                                  |
+
+## Endpoints of storage account
+
+| Storage service        | Endpoint                                              |
+| ---------------------- | ----------------------------------------------------- |
+| Blob                   | https://(storage-account-name).blob.core.windows.net  |
+| Data Lake Storage Gen2 | https://(storage-account-name).dfs.core.windows.net   |
+| File                   | https://(storage-account-name).file.core.windows.net  |
+| Queue                  | https://(storage-account-name).queue.core.windows.net |
+| Table                  | https://(storage-account-name).table.core.windows.net |
