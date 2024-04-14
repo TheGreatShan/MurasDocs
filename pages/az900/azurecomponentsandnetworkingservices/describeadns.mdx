@@ -1,0 +1,35 @@
+# Describe Azure DNS
+
+Provide a DNS hosting service for domain names in the MS Azure infrastrucutre
+
+## Benefits of Azure DNS
+
+- Reliability and performance
+- Secure
+- Ease of use
+- Customizable virtual networks
+- Alias records
+
+### Reliability and performance
+
+Azure DNS uses anycast networking. That means, that the DNS query is answered by the clostes available DNS server for perfomance an dhigh availability.
+
+### Security
+
+Based on Azure Resource Manager. These are the benefits:
+
+1. <strong>Azure role-based access control (Azure RBAC)</strong>: Controls who has access to specific actions inside the organization.
+2. <strong>Activity logs</strong>: Logs all actions in the Azure DNS zone. To find errors and for troubleshooting
+3. <string>Resource locking</strong>: It locks subscriptions, resource groups, and resources to prevent accidental deletion or modification.
+
+### Ease of use
+
+Uses the same system as all other Azure resources. It is in the Azure portal and configurable with Azure CLI, PowerShell, and REST API.
+
+### Customizable virtual networks
+
+Also allows custom domains. => Domain must be bought beforehand
+
+### Alias records
+
+Alias records can be created which dynamically change the entry based on the IP address of the target, if it is a Azure resource.

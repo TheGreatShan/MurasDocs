@@ -4,5 +4,6 @@
   "describeaho": "Describe application hosting options",
   "describeavn": "Describe Azure virtual networking",
   "describeaprivatevn": "Describe Azure virtual private networks",
-  "describeaer": "Describe Azure ExpressRoute"
+  "describeaer": "Describe Azure ExpressRoute",
+  "describeadns": "Describe Azure DNS"
 }
