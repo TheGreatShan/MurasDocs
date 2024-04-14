@@ -1,0 +1,62 @@
+# Describe Azure ExpressRoute
+
+With ExpressRoute I can extend my existing on-prem network with MS Cloud services with a PRIVATE connection. Each location would have its own ExpressRoute circuit.
+
+## Features and benefits
+
+1. Connectivity: I can connect to MS Cloud services across all regions in the gepolitical region.
+2. Global connectivity: I can connect to MS Cloud services in all regions with ExpressRoute Global Reach.
+3. Dynamic Routing: I can use Border Gateway Protocol (BGP) to dynamically route between my network and MS Cloud services.
+4. High availability: Redundancy is build in every peering location.
+
+### Connectivity to MS Cloud services
+
+Direct access to the following services:
+
+1. MS 265
+2. MS Dynamics 365
+3. Azure VMs (compute services)
+4. Azure Cosmos DB / Azure storage (cloud services)
+
+### Global connectivity
+
+With ExpressRoute Global Reach I can connect to services all over the world. For example, if I got a datacenter in one side of the world and an office on the other side, I can let them two connect without going through the public internet. This does also work with on-prem servers
+
+### Dynamic Routing
+
+The used protocol on ExpressRoute is BGP, which supports dynamic routing between the on-prem network and MS Cloud services.
+
+## ExpressRoute connectivity models
+
+It provides four different models:
+
+1. CloudExchange colocation
+2. Point-to-point Ethernet connection
+3. Any-to-any (IPVPN)
+4. Directly from ExpressRoute sites
+
+### Co-location at a cloud exchange
+
+<strong style="color: red;">CHECK WITH MS. NOT SURE IF THIS IS CORRECT</strong>
+Co-location means that I can connect to MS Cloud services at a cloud exchange provider. This is a good option if I want to connect to multiple cloud providers.
+
+### Point-to-point Ethernet connection
+
+Uses a point-to-point connection to connect On-prem to MS Cloud
+
+### Any-to-any (IPVPN)
+
+I can integrate my WAN with MS Azure by providin connections to my office and datacenter. Azure integrates with my WAN connection and the connection would work as seamlessly as my datacenter to any office of mine.
+
+### Directly from ExpressRoute sites
+
+I can also connect to MS global network at a peering location. It provides dual 100 Gbps or 10 Gbps connectivity to MS Cloud services. Support Active/Active connectivity.
+
+## Security considerations
+
+Everything travels over a private connection, except for:
+
+1. DNS queries
+2. Certificate recovation list checking
+3. Azure Content Delivery Network (CDN)
+   These are sent over public internet
