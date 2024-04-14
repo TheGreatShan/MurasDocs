@@ -1,0 +1,61 @@
+# Describe Azure virtual networking
+
+It is an extension of the on-prem network. It enables Azure resources to commuicate with eachother. For example Azure SQL together with Azure App Service.
+
+As MS says, these are the key capabilities of Azure Virtual Network:
+
+- Isolation and segmentation
+- Internet communications
+- Communication between Azure resources
+- Communication with the on-prem resources
+- Route network traffic
+- Filter network traffic
+- Connect virtual networks
+
+The Virtual Network can be both used in public and private enpoints. You can choose that. If I choose public, I can access the resources from the internet, but if I choose private endpoints, I can only access them within the address space of the Virtual network.
+
+## Capabilites explained
+
+### Isolation and segmentation
+
+- With Azure Virtual network, you can create multiple isolated virtual networks.
+- These are private endpoints, which can be only accessed in the same virtual network
+- Public endpoints have a public IP and are accessible from the internet
+
+### Internet communications
+
+- You can also connect to the Azure Virtual network by assigning a public IP address to the resources
+- Or putting them behind a public load balancer
+
+### Communication between Azure resources
+
+- Azure resources should communicate securily to each other. For this, we got these two possibilites:
+  - Virtual networks: They cannot jut connect with VMs, but also with other Azure resources, like App Service, Power Apss or Azure Kubernetes Service
+  - Service endpoints: They are a secure and direct connection to Azure services over the Azure backbone network
+
+### Communication with on-prem resources
+
+There are three mechanisms to connect to on-prem resources:
+
+1. <strong>Point-to-site</strong> virtual private network (VPN): This connects a computer to the corportate network. So it is a basic VPN, which connects the client cputer to the Azure Virtual network.
+2. <strong>Site-to-site</strong> VPN: Links the on-prem VPN device to the Azure VPN gateway in a VN (Virtual Network). So it is a VPN connection between the on-prem network and the Azure Virtual network.
+3. <strong>Azure ExpressRoute</strong>: This is a private connection between the on-prem network and the Azure Virtual network. It is not a VPN, but a dedicated connection.
+
+### Route network traffic
+
+- <strong>Route tables</strong>: I can define rules where the traffic should be directed to
+- <strong>Border Gateway Protocol (BGP)</strong>: This is a dynamic routing protocol, which is used to exchange routing information between the Azure Virtual network and the on-prem network
+
+### Filter network traffic
+
+Filtering is done by Azure virtual networks by using:
+
+- <strong>Network security groups (NSGs)</strong>: They are used to filter traffic to and from the Azure resources
+- <strong>Network virtual appliances</strong>: Carries out a particular network function. For example, a firewall or a WAN optimizer
+
+### Connect virtual networks
+
+Virtual networks can be linked together with <strong>virtual network peering</strong>. The connection is private and runs travels on Microsoft backbone network. So it is never exposed to the public.
+The virtual network do <strong>NOT</strong> have to be in the same region, but they have to be in the same subscription.
+
+<strong>User-defined routes</strong> can be used to direct traffic between the virtual networks.
