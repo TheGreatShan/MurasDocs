@@ -1,0 +1,20 @@
+# Describe Azure conditional access
+
+Allows to deny or accept access to resources. This is based on who the use ris, where the user is and what device is used;
+
+As MS says, it helps IT administrators to
+
+- Empower users to work from anywhere
+- Protect data and applications
+
+I can also set it up, that when I am in the office, it should not ask for MFA, but when I am outside the office, it should ask for MFA.
+
+Flowpicture from MS
+![Conditional Access](https://learn.microsoft.com/en-us/training/wwl-azure/describe-azure-identity-access-security/media/conditional-access-9bd268b8.png)
+
+## When can it be used?
+
+1. MFA is required: When I am outside the office or Admin require MFA, normal users not
+2. Require access to services inly through approved client applications
+3. Require the usage of managed devices -> You have to use the company provided laptop to be able to access the resources
+4. Blocking of untrusted soruces -> unknown or unexpected locations
