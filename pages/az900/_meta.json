@@ -1,7 +1,7 @@
 {
-  "describecloudcomputing": "MODULE 1 - Describe Cloud Computing",
-  "describearchitectureandservices": "MODULE 2 - Describe Azure architecture and services",
-  "azurecomponentsandnetworkingservices": "MODULE 3 - Describe Azure compute and networking ervices",
-  "storageservices": "MODULE 4 - Describe Azure storage services",
-  "identiyaccessandsecurity": "MODULE 5 - Describe Azure identity, access, and security"
+  "describecloudcomputing": "Describe Cloud Computing",
+  "describearchitectureandservices": "Describe Azure architecture and services",
+  "azurecomponentsandnetworkingservices": "Describe Azure compute and networking ervices",
+  "storageservices": "Describe Azure storage services",
+  "identiyaccessandsecurity": "Describe Azure identity, access, and security"
 }
