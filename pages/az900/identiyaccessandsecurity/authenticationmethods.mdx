@@ -1,0 +1,50 @@
+# Describe Azure authentication methods
+
+The process to identify a user a person or even other services and devices.
+It does not say, that you are approved the use the resource, but it shows who you are. Like when you are trying to enter a hotel an show your id card. You or not allowed to enter the room, but you are allowed to enter the hotel.
+
+The following image of Microsoft shows the authentication methods:
+[Authentication methods](https://learn.microsoft.com/en-us/training/wwl-azure/describe-azure-identity-access-security/media/passwordless-convenience-security-30321b4d.png)
+
+## Single sign-on (SSO) explained
+
+With SSO I only need to sign in once and this identity will be used on all supported applications which use it.
+With that I only need to remember one Username and password and do not need to remember multiple passwords.
+For this, the application needs to trust the intial authenticator from the Identity provider (IDP).
+
+## Multi-factor authentication (MFA) explained
+
+With that, I have one additional authentication step. For example SMS. Thanks to that, if an attacker got my username and password it is still not enough. He would need to bypass the extra layer of security.
+MFA fall into three categories:
+
+1. Something you know (challenge question)
+2. Something you have (smartphone)
+3. Something you are (biometric)
+
+## MS Entra multifactor auth explained
+
+MS provides phone call or mobile app notification as MFA
+
+## Passwordless authentication explained
+
+With that, the password is replaced with one of the MFA categories. This ensures the security
+
+Azure got the following options:
+
+1. Windows Hello for Business
+2. Microsoft Authenticator app
+3. FIDO2 security keys
+
+### Windows Hello for Business
+
+This is a biometric authentication method. It uses facial recognition, fingerprint or PIN. Also it is tied to the user's device.
+
+### Microsoft Authenticator app
+
+MS Authenticator app are mostly used for MFA with the Phone.
+But it can also be used for passwordless authentication. The user needs to approve the login on the phone.
+
+### FIDO2 security keys
+
+- Fast IDentity Online
+- It's a security key which is physical and can be used for passwordless authentication.
