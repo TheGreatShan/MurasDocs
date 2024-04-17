@@ -1,4 +1,5 @@
 {
   "directoryservices": "Azure directory services",
-  "authenticationmethods": "Describe Azure authentication methods"
+  "authenticationmethods": "Describe Azure authentication methods",
+  "externalidentities": "Describe Azure external identities"
 }
