@@ -1,4 +1,4 @@
-# Azure directory services
+# Azure directory services (DS -> Custom name)
 
 <strong>MS Entra ID</strong> is used for cloud applications -> Microsoft monitors the log in attempts and also
 reports to the user if there are any suspicious activities.
@@ -23,3 +23,8 @@ reports to the user if there are any suspicious activities.
 ### How does Entra Domain Services work?
 
 Defining two namespaces with unique names which equals to the domain name. Two Windows Server domain controller are deployed to the region. It is known as replica.
+
+### How is the infromation synchronized
+
+Only a one way synchronization is available from MS Entra ID to MS Entra DS.
+I can create resources directtly into the managed domain, but these are not syncrhonized over to the MS Entra ID.
