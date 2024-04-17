@@ -1,0 +1,25 @@
+# Azure directory services
+
+<strong>MS Entra ID</strong> is used for cloud applications -> Microsoft monitors the log in attempts and also
+reports to the user if there are any suspicious activities.
+
+<strong>Active Directory</strong> is locally on the on-prem server. This can not be accessed from the cloud and also not monitored by MS.
+
+## Who uses MS Entra ID
+
+1. <strong>IT administrators</strong>: Can use Entra ID to control who got access to the applications.
+2. <strong>Developers</strong>: Can use Entra ID to secure the applications. It also allows to do integrate SSO.
+3. <strong>Users</strong>: User can manage their identity and also can use the same credentials for multiple applications. Also they can self-reset their password
+4. <strong>Online service subscruber</strong>: MS 365, MS Office 365, Azure and MS Dynamics already use Entra ID.
+
+## What does Entra ID do?
+
+1. <strong>Authentication</strong>: Entra ID authenticates the user and also
+   checks if the user is authorized to access the application.
+2. <strong>Single sign-on (SSO)</strong>: Entra ID allows the user to sign in once and then access multiple applications.
+3. <strong>Application management</strong>: Cloud and on-prem apps can be managed with Entra ID.
+4. <strong>Device management</strong>: Also can check if the user is allowed to enter with a certain device. E. g Intune managed devices are allowed but private devices not, even though they are logged in with the same user.
+
+### How does Entra Domain Services work?
+
+Defining two namespaces with unique names which equals to the domain name. Two Windows Server domain controller are deployed to the region. It is known as replica.
