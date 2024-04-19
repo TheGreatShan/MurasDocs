@@ -3,5 +3,6 @@
   "authenticationmethods": "Describe Azure authentication methods",
   "externalidentities": "Describe Azure external identities",
   "conditionalaccess": "Describe Azure conditional access",
-  "rolebasedac": "Describe Azure role-based access control"
+  "rolebasedac": "Describe Azure role-based access control",
+  "zerotrust": "Describe zero trust model"
 }

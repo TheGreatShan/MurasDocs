@@ -1,0 +1,17 @@
+# Zero trust model
+
+It assumes the worst case scenario. It therefore protects the resources also like that.
+
+MS recomments the following Zero trust models:
+
+1. Verify explicitly: Always authenticate and authorized on all data points.
+2. Least privileged access: I should only pass really required permissions.
+3. Assume breach: Always assume that the network is already compromised.
+
+## Adjusting to the Zero trust model
+
+- <strong>Classic model</strong>: All devices are restricted to join the network. So for example, only cooperate devices are allowed. No personal devices are allowed and also I got tightly controlled VPN access.
+- <strong>Zero trust model</strong>: It flips the logic. Here it does not assume a device is safe but it asks me to authenticate against it. So the location of the device is less of a matter but the authentication matters more
+
+Graph from MS:
+![Zero trust model](https://learn.microsoft.com/en-us/training/wwl-azure/describe-azure-identity-access-security/media/zero-trust-cf9202be.png)
