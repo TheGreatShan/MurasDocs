@@ -4,5 +4,6 @@
   "externalidentities": "Describe Azure external identities",
   "conditionalaccess": "Describe Azure conditional access",
   "rolebasedac": "Describe Azure role-based access control",
-  "zerotrust": "Describe zero trust model"
+  "zerotrust": "Describe zero trust model",
+  "defenseindepth": "Describe defense-in-depth"
 }
