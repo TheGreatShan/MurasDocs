@@ -5,5 +5,6 @@
   "conditionalaccess": "Describe Azure conditional access",
   "rolebasedac": "Describe Azure role-based access control",
   "zerotrust": "Describe zero trust model",
-  "defenseindepth": "Describe defense-in-depth"
+  "defenseindepth": "Describe defense-in-depth",
+  "mscdefenderforcloud": "Describe Microsoft Defender for Cloud"
 }
