@@ -1,0 +1,34 @@
+# Describe factors that can affect costs in Azure
+
+Thanks to Azure, Ic an switch from CapEx (Capital expense -> building out and maintaining infrastrucutre) to OpEx (Operational expense -> pay as you go)
+
+In the following there will be some factors that can affect costs in Azure:
+
+## Resource Type
+
+- Different resources have different costs
+- Even when it is the same machine but different Region, it can have different costs
+
+## Consumption
+
+- The more you use, the more you pay (Pay as you go)
+- I can also have contract with reserved instances to get discount (up to 72 per cent)
+
+  - In case the usage is less than the reserved instance, I will still pay the same amount
+  - If it is more, I will pay the same amount for the reserved instance and the extra usage will be charged at the normal rate
+
+## Maintenance
+
+To reduce the costs I should always check the resources which are created. A VM for example under the hood it creates also a storage and networking resource in the Resource group. But if I delete the VM, the storage and networkign resource are still online and will use cost. So I should regulary check the resources and delete unnecessary ones.
+
+## Geography
+
+Prices vary by region, as taxes, power and labor costs are different. Also network traffic is impacted. So it is less expensive to move information in the same continent than on two different ones
+
+## Subscription Type
+
+Also subnscription vary on costs. For example the free trial subscription got a allowance, which allows to have free azure products for 12 months and some sort of credit system.
+
+## Azure Marketplace
+
+Lets me purchase Azure certified thrid party applications which can be billed to the same Azure account.

@@ -3,5 +3,6 @@
   "describearchitectureandservices": "Describe Azure architecture and services",
   "azurecomponentsandnetworkingservices": "Describe Azure compute and networking ervices",
   "storageservices": "Describe Azure storage services",
-  "identiyaccessandsecurity": "Describe Azure identity, access, and security"
+  "identiyaccessandsecurity": "Describe Azure identity, access, and security",
+  "costmanagement": "Describe cost management in Azure"
 }
