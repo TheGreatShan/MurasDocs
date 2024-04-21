@@ -1,5 +1,6 @@
 {
   "affectCosts": "Describe factors that can affect costs in Azure",
   "compareCosts": "Compare the Pricing and Total Cost of Ownership calculators",
-  "mscostmanagement": "Describe the Microsoft Cost Management tool"
+  "mscostmanagement": "Describe the Microsoft Cost Management tool",
+  "tags": "Describe the purpose of tags"
 }
