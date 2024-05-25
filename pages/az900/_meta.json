@@ -4,5 +4,6 @@
   "azurecomponentsandnetworkingservices": "Describe Azure compute and networking ervices",
   "storageservices": "Describe Azure storage services",
   "identiyaccessandsecurity": "Describe Azure identity, access, and security",
-  "costmanagement": "Describe cost management in Azure"
+  "costmanagement": "Describe cost management in Azure",
+  "governanceandcompliance": "Describe features and tools in Azure for governance and compliance"
 }
